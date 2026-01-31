@@ -1,4 +1,3 @@
-```markdown
 # MonLive
 
 **MonLive** es una aplicación web de **monitoreo remoto en tiempo real** desarrollada con **Node.js**, diseñada para visualizar métricas críticas de un servidor o equipo local desde cualquier navegador.
@@ -83,3 +82,4 @@ Accede desde el navegador:
 ```
 http://localhost:8000
 ```
+
