@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>MonLive | Monitor de Servidor</title>
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- Socket.IO -->
+  <script src="/socket.io/socket.io.js"></script>
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+
+</head>
+
+<body>
+
+  <header>
+    <p id="status">Conectando...</p>
+    <h1>MonLive</h1>
+    <p>Monitoreo remoto en tiempo real</p>
+  </header>
+
+  <section class="cards">
+    <div class="card" id="cpu-card">
+      <h3>CPU</h3>
+      <span id="cpu">0%</span>
+    </div>
+
+    <div class="card" id="ram-card">
+      <h3>RAM</h3>
+      <span id="ram">0%</span>
+    </div>
+
+    <div class="card" id="temp-card">
+      <h3>Temp CPU</h3>
+      <span id="temp">0°C</span>
+    </div>
+
+    <div class="card">
+      <h3>Disco</h3>
+      <span id="disk">0%</span>
+    </div>
+  </section>
+
+  <section class="cards">
+    <div class="card" id="gpu-card">
+      <h3>GPU</h3>
+      <span id="gpu-temp">0°C</span>
+      <small id="gpu-name">N/A</small>
+    </div>
+
+    <div class="card">
+      <h3>Tiempo activo</h3>
+      <span id="uptime">0 min</span>
+    </div>
+  </section>
+
+  <section class="chart-section">
+    <canvas id="usageChart"></canvas>
+  </section>
+
+  <section class="chart-section">
+    <canvas id="gpuChart"></canvas>
+  </section>
+
+  <footer>
+    <p>MonLive © Francisco Javier Estrada Reyes</p>
+  </footer>
+
+  <script src="js/dashboard.js"></script>
+</body>
+
+</html>
