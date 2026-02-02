@@ -83,3 +83,45 @@ Accede desde el navegador:
 http://localhost:8000
 ```
 
+## Exponer el servidor públicamente con LocalTunnel (opcional)
+
+Si quieres que tu servidor local sea accesible desde Internet (por ejemplo, para mostrar el dashboard a otra persona o probar webhooks), puedes usar LocalTunnel para crear una URL pública que redirija a tu `localhost`.
+
+- ¿Qué es LocalTunnel?
+
+  LocalTunnel es una utilidad que crea un túnel seguro desde una URL pública en internet hasta tu servidor local. Permite compartir rápidamente un servicio que está corriendo en `localhost` sin desplegarlo en un servidor público.
+
+- Instalación (opcional):
+
+  Para usar el comando `lt` (atajo), instala LocalTunnel globalmente:
+
+  ```bash
+  npm install -g localtunnel
+  ```
+
+  Si no quieres instalarlo globalmente, puedes usar `npx` (ejecuta la versión remota sin instalación global):
+
+  ```bash
+  npx localtunnel --port 8000
+  ```
+
+- Uso básico:
+
+  Ejecuta LocalTunnel apuntando al puerto donde corre MonLive (por defecto 8000):
+
+  ```bash
+  lt --port 8000
+  ```
+
+  Al ejecutar el comando verás una URL pública (por ejemplo `https://random-subdomain.loca.lt`) que podrás compartir para acceder al dashboard desde cualquier lugar.
+
+- Notas y seguridad:
+
+  - El comando `lt` requiere que LocalTunnel esté instalado globalmente; si usas `npx` no necesitarás la instalación global.
+  - Ten en cuenta que exponer tu servicio a Internet puede implicar riesgos de seguridad. Úsalo sólo cuando confíes en las personas con las que compartes la URL y evita exponer servicios sensibles.
+  - LocalTunnel es útil para demostraciones temporales y pruebas, pero para producción se recomiendan soluciones más robustas y configuradas (servidores con HTTPS, autenticación, firewall, etc.).
+
+
+## Licencia
+
+(Añade la licencia si procede)
