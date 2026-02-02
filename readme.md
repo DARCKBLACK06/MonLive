@@ -120,8 +120,3 @@ Si quieres que tu servidor local sea accesible desde Internet (por ejemplo, para
   - El comando `lt` requiere que LocalTunnel esté instalado globalmente; si usas `npx` no necesitarás la instalación global.
   - Ten en cuenta que exponer tu servicio a Internet puede implicar riesgos de seguridad. Úsalo sólo cuando confíes en las personas con las que compartes la URL y evita exponer servicios sensibles.
   - LocalTunnel es útil para demostraciones temporales y pruebas, pero para producción se recomiendan soluciones más robustas y configuradas (servidores con HTTPS, autenticación, firewall, etc.).
-
-
-## Licencia
-
-(Añade la licencia si procede)
